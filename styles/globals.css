@@ -2,8 +2,12 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif; */
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  background-color: #fff1e5;
+  color: #262a33;
 }
 
 a {
@@ -14,3 +18,503 @@ a {
 * {
   box-sizing: border-box;
 }
+
+
+/*********************************************************
+ main block styling with grid and media query 
+***********************************************************/
+
+.main {
+  min-height: calc(100vh - 190px);
+  max-width: 1400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat( 12, 1fr);
+  grid-template-rows: repeat( auto-fill, 4, 1fr); /*auto-fill,*/  
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-items: center;
+}
+
+/*********************************************************
+ header and navigation styling 
+***********************************************************/
+
+.header {
+  display: flex;
+  flex-direction: row;
+  background-color: #262a33;
+  color: #fff1e5;
+  height: 140px;
+  font-size: 40px;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.header-container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header-meniu {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+.div-meniu {
+  position: relative;
+  color:#8ebf22;
+}
+.div-meniu-exp {
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+  width: 320px;
+  top: 70px;
+  left: -20px;
+  background-color: #262a33f6;
+  border: 1px solid #262a33;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 10px;
+}
+.div-meniu-exp-mijloc {
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+  width: 320px;
+  top: 70px;
+  left: -125px;
+  background-color: #262a33f6;
+  border: 1px solid #262a33;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 10px;
+}
+.div-meniu-exp-dreapta {
+  position: absolute;
+  visibility: hidden;
+  z-index: 1;
+  width: 320px;
+  top: 70px;
+  left: -220px;
+  background-color: #262a33f6;
+  border: 1px solid #262a33;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-right: 10px;
+}
+.div-meniu-exp::after{
+  content: " ";
+  position: absolute;
+  bottom: 100%; 
+  left: 20%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #262a33 transparent;
+}
+.div-meniu-exp-mijloc::after{
+  content: " ";
+  position: absolute;
+  bottom: 100%; 
+  left: 50%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #262a33 transparent;
+}
+.div-meniu-exp-dreapta::after{
+  content: " ";
+  position: absolute;
+  bottom: 100%; 
+  left: 80%;
+  margin-left: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #262a33 transparent;
+}
+.div-meniu:hover {
+  color: #b5f038;
+}
+.div-meniu:hover .div-meniu-exp {
+  visibility: visible;
+}
+.div-meniu:hover .div-meniu-exp-mijloc {
+  visibility: visible;
+}
+.div-meniu:hover .div-meniu-exp-dreapta {
+  visibility: visible;
+}
+.meniu-title-exp {
+  padding-left: 10px;
+  padding-top: 6px;
+  letter-spacing: 4px;
+  font-size: 18px;
+  font-style: normal;
+}
+.meniu-text-exp {
+  padding-left: 10px;
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-style: normal;
+  text-align: justify;
+}
+
+.header-logo {
+  padding-left: 20px;
+}
+.logo {
+  font-size: 60px;
+  letter-spacing: -8px;
+  padding-right: 20px;
+  color: #8ebf22;
+}
+.logo-text {
+  font-size: 12px;
+  padding-left: 76px;
+  margin-top: -12px;
+  color: #8ebf22;
+  font-style: normal;
+  letter-spacing: 4px;
+}
+
+.footer {
+  background-color: #262a33;
+  color: #fff1e5;
+  height: 50px;
+  text-align: center;
+  font-size: 16px;
+  padding-top: 12px;
+  margin-top: 20px;
+}
+
+.policy {
+  height: calc(100vh - 190px);
+  text-align: center;
+  padding-top: 40px;
+}
+
+
+/*********************************************************
+ form styling 
+***********************************************************/
+
+.meniu-unit{
+  border: 1px solid #f5d5bb;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.meniu-title {
+  padding-left: 10px;
+  letter-spacing: 4px;
+}
+.meniu-text {
+  padding-left: 10px;
+}
+
+.field-block {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.field-label {
+    margin-left: 6px;
+    margin-bottom: 4px;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.field-element {
+    padding: 8px;
+    padding-left: 20px;
+    font-size: 16px;
+    border: none;
+    border: 1px solid #e4cdba;
+    background-color: #fff1e5;
+    border-radius: 6px;
+}
+.field-element:focus {
+  outline: none;
+  background-color: #f7dfcb;
+}
+.field-element-select {
+    -webkit-appearance:none;
+    background: url(../public/k.png) no-repeat right;
+    background-size: 18px 18px;
+    padding: 8px;
+    padding-left: 20px;
+    font-size: 16px;
+    border: none;
+    border: 1px solid #e4cdba;
+    background-color: #fff1e5;
+    border-radius: 6px;
+}
+.field-element-select:focus {
+  outline: none;
+  background-color: #f7dfcb;
+}
+.field-element-select-mic {
+    -webkit-appearance:none;
+    background: url(../public/k.png) no-repeat right;
+    background-size: 16px 16px;
+    width: 40px;
+    margin-left: 10px;
+    padding-left: 3px;
+    margin-right: 10px;
+    font-size: 12px;
+    background-color: #fff1e5;
+    border: 1px dotted #e5b28b;
+}
+.field-element-select-mic:focus {
+  outline: none;
+}
+
+.field-exp {
+  margin-top: 6px;
+  margin-left: 6px;
+  text-align: justify;
+}
+
+.error-msg {
+  color: tomato;
+  font-size: 14px;
+  margin-left: 6px;
+}
+
+.calc-btn {
+  width: 160px;
+  height: 45px;
+  margin: auto;
+  margin-top: 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 18px;
+  color: #262a33;
+  background-color: #8ebf22;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.calc-btn:hover {
+  background-color: #3a9417;
+}
+.calc-btn:disabled {
+  background-color: rgba(255, 99, 71, 0.562);
+}
+
+/*********************************************************
+ form styling 
+***********************************************************/
+
+.form {
+  grid-area: 1/1/3/-1;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  padding: 10px;
+}
+.grafic {
+  grid-area: 3/1/4/-1;
+  width: 90%;
+  margin: auto;
+}
+.table {
+  grid-area: 4/1/5/-1;
+  max-width: 90%;
+  margin: auto;
+}
+.th-row {
+  padding-bottom: 10px;
+}
+
+.tf-row {
+  padding-top: 10px;
+}
+
+/*********************************************************
+ table styling 
+***********************************************************/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.th-row {
+  border-bottom: 1px solid black;
+}
+
+.tf-row {
+  border-top: 1px solid black;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f7dfcb;
+}
+
+.field-exp-tabel {
+  margin: 10px;
+  text-align: justify;
+}
+
+@media only screen and (min-width: 815px) {
+
+/*********************************************************
+ header and navigation styling 
+***********************************************************/
+
+  .header {
+    height: 100px;
+  }
+  .header-container {
+    max-width: 1400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header-meniu {
+    width: 50%;
+  }
+
+  .meniu-unit{
+    margin-left: 10px;
+    margin-right: 40px;
+  }
+
+  .div-meniu-exp {
+      top: 75px;
+      left: -25px;
+  }
+  .div-meniu-exp-mijloc {
+      top: 75px;
+      left: -125px;
+  }
+  .div-meniu-exp-dreapta {
+      top: 75px;
+      left: -225px;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 100%;
+    margin: auto;
+  }
+  .field-block {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+  max-width: 400px;
+  margin: auto;
+  }
+
+  .grafic {
+    grid-area: 3/1/4/-1;
+    width: 90%;
+    margin: auto;
+    /* border: 1px solid black; */
+  }
+  .table {
+    grid-area: 4/1/5/-1;
+    width: 90%;
+    margin: auto;
+    /* border: 1px solid black; */
+  }
+  .th-row {
+  padding: 10px;
+  }
+
+  .tf-row {
+    padding: 10px;
+  }
+
+}
+
+
+
+@media only screen and (min-width: 1200px) {
+
+/*********************************************************
+ header and navigation styling 
+***********************************************************/
+
+  .header {
+    height: 100px;
+  }
+  .header-container {
+    max-width: 1400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header-meniu {
+    width: 50%;
+  }
+  .meniu-unit{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .div-meniu-exp {
+      top: 75px;
+      left: -25px;
+  }
+  .div-meniu-exp-mijloc {
+      top: 75px;
+      left: -125px;
+  }
+  .div-meniu-exp-dreapta {
+      top: 75px;
+      left: -225px;
+  }
+
+
+  .form { 
+    grid-area: 1/1/3/4;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+  }
+  .grafic {
+    grid-area: 1/4/2/-1;
+    width: 90%;
+    margin: auto;
+    /* border: 1px solid black; */
+  }
+  .table {
+    grid-area: 2/4/5/-1;
+    width: 90%;
+    margin: auto;
+    /* border: 1px solid black; */
+  }
+  .th-row {
+  padding: 10px;
+  }
+
+  .tf-row {
+    padding: 10px;
+  } 
+
+} 
+
+
+
+
