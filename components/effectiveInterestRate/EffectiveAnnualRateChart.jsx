@@ -10,7 +10,7 @@ function EffectiveAnnualRateChart(props) {
             {
                 label: 'merge',
                 data: [props.nominal, props.effective],
-                backgroundColor: [ 'lightblue', 'lightgreen'],
+                backgroundColor: [ 'rgba(51, 153, 255, 0.5)', 'rgba(51, 204, 51, 0.5)'],
                 borderColor: ['blue', 'green'],
                 borderWidth: 1
             }

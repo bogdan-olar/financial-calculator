@@ -21,8 +21,8 @@ function EffectiveInterestRate() {
     function handleCalculation(newValues) {
 
         const object = {}
-        object.annualInterestRate = parseInt(newValues.annualInterestRate)
-        object.compoundingPeriod = parseInt(newValues.compoundingPeriod);
+        object.annualInterestRate = parseFloat(newValues.annualInterestRate)
+        object.compoundingPeriod = parseFloat(newValues.compoundingPeriod);
 
         setEffectiveAnnualRate(object)
         setData(calcEffectiveAnnualRate(object));

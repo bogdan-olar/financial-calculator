@@ -22,10 +22,10 @@ function FutureValueAnnuity() {
     function handleCalculation(newValues) {
 
         const newValuesToInt = {}
-        newValuesToInt.periodicSum = parseInt(newValues.periodicSum)
-        newValuesToInt.interestRate = parseInt(newValues.interestRate)
-        newValuesToInt.inflationRate = parseInt(newValues.inflationRate)
-        newValuesToInt.numberOfPeriods = parseInt(newValues.numberOfPeriods)
+        newValuesToInt.periodicSum = parseFloat(newValues.periodicSum)
+        newValuesToInt.interestRate = parseFloat(newValues.interestRate)
+        newValuesToInt.inflationRate = parseFloat(newValues.inflationRate)
+        newValuesToInt.numberOfPeriods = parseFloat(newValues.numberOfPeriods)
         newValuesToInt.periodType = newValues.periodType 
 
         setFutureValueAnnuityVar(newValuesToInt)

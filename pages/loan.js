@@ -23,10 +23,10 @@ function Loan() {
     function handleCalculate(newValues) {
 
         const obiect = {}
-        obiect.loanAmount = parseInt(newValues.loanAmount)
-        obiect.loanTerm = parseInt(newValues.loanTerm)
+        obiect.loanAmount = parseFloat(newValues.loanAmount)
+        obiect.loanTerm = parseFloat(newValues.loanTerm)
         obiect.loanInterestRate = parseFloat(newValues.loanInterestRate)
-        obiect.payBackPeriod = parseInt(newValues.payBackPeriod)
+        obiect.payBackPeriod = parseFloat(newValues.payBackPeriod)
 
         setCreditValues(obiect)
         setData(calcLoan(obiect))

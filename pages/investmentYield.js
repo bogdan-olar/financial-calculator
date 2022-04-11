@@ -25,12 +25,12 @@ function InvestmentYield() {
     function handleCalculation(newValues) {
 
         const obiect = {}
-        obiect.investmentPrincipal = parseInt(newValues.investmentPrincipal)
-        obiect.annualGrowthRate = parseInt(newValues.annualGrowthRate)
-        obiect.inflationRate = parseInt(newValues.inflationRate)
-        obiect.annualInvestmentFee = parseInt(newValues.inflationRate)
-        obiect.totalTaxRate = parseInt(newValues.totalTaxRate)
-        obiect.periods = parseInt(newValues.periods)
+        obiect.investmentPrincipal = parseFloat(newValues.investmentPrincipal)
+        obiect.annualGrowthRate = parseFloat(newValues.annualGrowthRate)
+        obiect.inflationRate = parseFloat(newValues.inflationRate)
+        obiect.annualInvestmentFee = parseFloat(newValues.inflationRate)
+        obiect.totalTaxRate = parseFloat(newValues.totalTaxRate)
+        obiect.periods = parseFloat(newValues.periods)
 
         setInvestmentValues(obiect)
         setData(calcInvestmentYeld(obiect))

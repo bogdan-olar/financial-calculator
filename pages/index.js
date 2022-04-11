@@ -23,10 +23,10 @@ export default function Home() {
   function handleCalculation( newValues ) {
 
     const newValuesToiInt = {}
-    newValuesToiInt.prezentValue = parseInt(newValues.prezentValue)
-    newValuesToiInt.interestRate = parseInt(newValues.interestRate)
-    newValuesToiInt.inflationRate = parseInt(newValues.inflationRate)
-    newValuesToiInt.numberOfPeriods = parseInt(newValues.numberOfPeriods)
+    newValuesToiInt.prezentValue = parseFloat(newValues.prezentValue)
+    newValuesToiInt.interestRate = parseFloat(newValues.interestRate)
+    newValuesToiInt.inflationRate = parseFloat(newValues.inflationRate)
+    newValuesToiInt.numberOfPeriods = parseFloat(newValues.numberOfPeriods)
     newValuesToiInt.periodType = newValues.periodType
     setFutureValueVar(newValuesToiInt)
     setData(calcFutureValue(newValuesToiInt))
