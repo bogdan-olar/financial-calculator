@@ -1,17 +1,17 @@
 
-import {PolarArea} from 'react-chartjs-2'
+import {Doughnut} from 'react-chartjs-2'
 import {Chart as ChartJS} from 'chart.js/auto'
 
 function EffectiveAnnualRateChart(props) {
 
     const graficData = {
-        labels: ['nominal anual rate', 'effective annual rate'],
+        labels: ['effective annual rate', 'nominal anual rate', 'difference'],
         datasets: [
             {
                 label: 'merge',
-                data: [props.nominal, props.effective],
-                backgroundColor: [ 'rgba(51, 153, 255, 0.5)', 'rgba(51, 204, 51, 0.5)'],
-                borderColor: ['blue', 'green'],
+                data: [props.effective, props.nominal, props.effective-props.nominal],
+                backgroundColor: [ 'rgba(51, 153, 255, 0.5)', 'rgba(51, 204, 51, 0.5)', 'rgba(255, 99, 71, 0.7)'],
+                borderColor: ['#fff1e5'],
                 borderWidth: 1
             }
         ]
@@ -37,7 +37,7 @@ function EffectiveAnnualRateChart(props) {
 
     return(
         <div className='grafic' style={{maxWidth: '450px'}}>
-            <PolarArea data={graficData} options={options} />
+            <Doughnut data={graficData} options={options} />
         </div>
     )
 

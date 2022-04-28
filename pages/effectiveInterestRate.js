@@ -11,7 +11,7 @@ function EffectiveInterestRate() {
 
     const [effectiveAnnualRate, setEffectiveAnnualRate] = useState({
       annualInterestRate: 8,
-      compoundingPeriod: 2,
+      compoundingPeriod: 365,
     });
 
     const [data, setData] = useState(

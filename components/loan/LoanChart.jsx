@@ -12,16 +12,16 @@ function LoanChart(props) {
             {
                 label: 'Unequal rate',
                 data: data.map( i => i.unequalRateLoanSold ),
-                backgroundColor: ['rgba(255, 0, 0, 0.5)'],
-                borderColor: ['red'],
+                backgroundColor: ['rgba(39, 105, 190, 0.7)'],//['rgba(216, 159, 14, 0.6)'],
+                borderColor: ['grey'],
                 borderWidth: 1, 
                 fill: { target: 'origin'}
             },
             {
                 label: 'Equal rate',
                 data: data.map( i => i.equalRateLoanSold ),
-                backgroundColor: ['lightgreen'],
-                borderColor: ['green'],
+                backgroundColor: ['rgba(216, 159, 14, 0.7)'], //['rgba(39, 105, 190, 0.6)'],
+                borderColor: ['grey'],
                 borderWidth: 1,
                 fill: { target: '-1'}
             }
