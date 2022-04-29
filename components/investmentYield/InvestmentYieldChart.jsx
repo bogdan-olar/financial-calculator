@@ -24,8 +24,8 @@ function InvestmentYieldChart(props) {
             totals.totalBrutProfit,
             totals.totalInflationBrutProfit,
           ],
-          backgroundColor: ["#2a71d0"], //["#4bc0c0"],
-          borderColor: ['black'],
+          backgroundColor: ['rgba(42, 113, 208, 0.6)'],
+          borderColor: ['grey'],
           borderWidth: 1
         },
         {
@@ -34,7 +34,7 @@ function InvestmentYieldChart(props) {
             totals.totalFees,
             totals.totalFees,
           ],
-          backgroundColor: ["#f3ba2f"], //["#ecf0f1"],
+          backgroundColor: ["rgba(243, 186, 47, 0.6)"],
           borderColor: ['grey'],
           borderWidth: 1
         },
@@ -44,7 +44,7 @@ function InvestmentYieldChart(props) {
             totals.totalTaxes,
             totals.totalTaxes,
           ],
-          backgroundColor: ["#ecf0f1"], //["#f3ba2f"],
+          backgroundColor: ["rgba(236, 240, 241, 0.6)"], 
           borderColor: ['grey'],
           borderWidth: 1
         },
@@ -54,7 +54,7 @@ function InvestmentYieldChart(props) {
             totals.totalNetProfit,
             totals.totalInflationNetProfit,
           ],
-          backgroundColor: ["#4bc0c0"], //["#2a71d0"],
+          backgroundColor: ["rgba(75, 192, 192, 0.6)"], 
           borderColor: ['grey'],
           borderWidth: 1
         }

@@ -13,8 +13,8 @@ function Loan() {
 
     const [creditValues, setCreditValues] = useState({
         loanAmount: 100000,
-        loanTerm: 10,
-        loanInterestRate: 10,
+        loanTerm:30,
+        loanInterestRate: 8,
         payBackPeriod: 12
     })
 

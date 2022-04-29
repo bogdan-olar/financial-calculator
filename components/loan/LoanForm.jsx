@@ -36,7 +36,7 @@ function LoanForm(props) {
             </div>
             <div>
                 <div className='meniu-title'> Loans  </div>
-                <div className='meniu-text'> Calculate your loan costs and the amount you have to pay back. </div>
+                <div className='meniu-text'> Calculate your loan costs and the amount you pay back. </div>
             </div>
          </div> 
 

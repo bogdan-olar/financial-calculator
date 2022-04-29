@@ -30,7 +30,7 @@ function EffectiveInterestRateForm(props) {
             </div>
             <div>
                 <div className='meniu-title'> Effective Interest Rate </div>
-                <div className='meniu-text'> Calculate effective annual interest rate with different compunding periods in that particular year. </div>
+                <div className='meniu-text'> Calculate effective annual interest rate for different compunding periods. </div>
             </div>
          </div> 
 

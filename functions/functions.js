@@ -149,6 +149,13 @@ function calcLoan(creditValues) {
     obiect.unequalRateRamas = obiect.unequalRateLoanSold - obiect.unequalRateFixAmount
     obiect.unequalRateInterestRate = obiect.unequalRateLoanSold * (obiect.loanInterestRatePeriod / 100)
     obiect.unequalRate = obiect.unequalRateFixAmount + obiect.unequalRateInterestRate
+    if( i === 1 ) {
+        obiect.unequalRateTotalPaid = obiect.unequalRate
+    }
+    if ( i > 1) {
+        obiect.unequalRateTotalPaid = obiect.unequalRate + data[i-2].unequalRateTotalPaid
+    }
+    
 
     //equal rate
     obiect.factor =  ( 1 - 
@@ -162,6 +169,7 @@ function calcLoan(creditValues) {
       obiect.equalRateSoldInterestRate = obiect.equalRateLoanSold * (obiect.loanInterestRatePeriod / 100);
       obiect.equalRateCapitalRate = obiect.equalRate - obiect.equalRateSoldInterestRate;
       obiect.equalRateRamas = obiect.equalRateLoanSold - obiect.equalRateCapitalRate
+      obiect.equalRateTotalPaid = obiect.equalRate
     }
 
     if ( i > 1 ) {
@@ -169,6 +177,7 @@ function calcLoan(creditValues) {
       obiect.equalRateSoldInterestRate = obiect.equalRateLoanSold * (obiect.loanInterestRatePeriod / 100)
       obiect.equalRateCapitalRate = obiect.equalRate - obiect.equalRateSoldInterestRate
       obiect.equalRateRamas = obiect.equalRateLoanSold -obiect.equalRateCapitalRate
+      obiect.equalRateTotalPaid = obiect.equalRate * i
     }
 
     data.push(obiect)

@@ -10,21 +10,36 @@ function LoanChart(props) {
         labels: data.map( (v, i) => i+1),
         datasets: [
             {
-                label: 'Unequal rate',
-                data: data.map( i => i.unequalRateLoanSold ),
-                backgroundColor: ['rgba(39, 105, 190, 0.7)'],//['rgba(216, 159, 14, 0.6)'],
-                borderColor: ['grey'],
+                label: 'Loan amount',
+                data: data.map( i => i.loanAmount ),
+                backgroundColor: ['rgba(211, 211, 211, 0.4)'], //['rgba(39, 105, 190, 0.7)'],//['rgba(216, 159, 14, 0.6)'],
+                borderColor: ['rgba(153, 153, 153, 0.4)'],
                 borderWidth: 1, 
-                fill: { target: 'origin'}
+                fill: { target: 'origin'},
+                pointStyle: 'circle',
+                pointRadius: 0
             },
             {
-                label: 'Equal rate',
-                data: data.map( i => i.equalRateLoanSold ),
-                backgroundColor: ['rgba(216, 159, 14, 0.7)'], //['rgba(39, 105, 190, 0.6)'],
-                borderColor: ['grey'],
+                label: 'Total unequal rate paid',
+                data: data.map( value => value.unequalRateTotalPaid ),
+                backgroundColor: ['rgba(51, 204, 51, 0.5)'],
+                borderColor: ['rgba(153, 153, 153, 0.6)'],
                 borderWidth: 1,
-                fill: { target: '-1'}
+                fill: { target: 'origin'},
+                pointStyle: 'circle',
+                pointRadius: 1
+            },
+            {
+                label: 'Tota equal rate paid',
+                data: data.map( (value, index) => value.equalRateTotalPaid ),
+                backgroundColor: ['rgba(51, 153, 255, 0.5)'],
+                borderColor: ['rgba(153, 153, 153, 0.6)'],
+                borderWidth: 1,
+                fill: { target: '-1'},
+                pointStyle: 'circle',
+                pointRadius: 1
             }
+
         ]
     }
 
