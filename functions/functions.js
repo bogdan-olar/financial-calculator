@@ -18,7 +18,7 @@ future value calculation function
       period = 365
     }
 
-    for (let i = 0; i <= values.numberOfPeriods*period; i++) {
+    for (let i = 0; i <= (values.numberOfPeriods*period); i++) {
       let obiect = {};
       obiect.period = i;
       obiect.initialSum = values.prezentValue;
@@ -54,7 +54,7 @@ future value of a annuity calculation function
       period = 365
     }
 
-    for (let i = 1; i <= values.numberOfPeriods; i++) {
+    for (let i = 1; i <= (values.numberOfPeriods * period); i++) {
 
       let obiect = {}
 
